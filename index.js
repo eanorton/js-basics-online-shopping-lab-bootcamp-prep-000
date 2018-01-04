@@ -52,7 +52,7 @@ function total() {
 }
 
 function removeFromCart(item) {
-  
+  let itemInCart = false
 }
 
 function placeOrder(cardNumber) {
