@@ -18,21 +18,16 @@ function addToCart(item) {
 
 function viewCart() {
   const l = cart.length;
-
   if (!l) {
     return console.log("Your shopping cart is empty.");
   }
-
   let itemsAndPrices = [];
-
   for (let i = 0; i < l; i++) {
     let itemAndPrice = cart[i];
     let item = Object.keys(itemAndPrice)[0];
     let price = itemAndPrice[item];
-
     itemsAndPrices.push(`${item} at \$${price}`);
   }
-
   switch(itemsAndPrices.length) {
     case 1:
       break;
@@ -43,26 +38,23 @@ function viewCart() {
       itemsAndPrices[l-1] = "and ".concat(itemsAndPrices[l-1]);
       itemsAndPrices = itemsAndPrices.join(", ");
   }
-
   console.log(`In your cart, you have ${itemsAndPrices}.`);
 }
 
 function total() {
   let total = 0;
-
   for (let i = 0, l = cart.length; i < l; i++) {
     for (let item in cart[i]) {
       total += cart[i][item];
     }
   }
-
   return total;
 }
 
 function removeFromCart(item) {
-  // write your code here
+  
 }
 
 function placeOrder(cardNumber) {
-  // write your code here
+  
 }
