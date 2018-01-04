@@ -53,6 +53,17 @@ function total() {
 
 function removeFromCart(item) {
   let itemInCart = false
+  for (let i = 0, l = cart.length; i < l; i++) {
+    if (cart[i].hasOwnProperty(item)) {
+      itemInCart = true;
+      cart = cart.slice(0, i).concat(cart.slice(i + 1));
+      l--;
+    }
+  }
+  if (!itemInCart) {
+    console.log("That item is not in your cart.");
+  }
+  return cart;
 }
 
 function placeOrder(cardNumber) {
